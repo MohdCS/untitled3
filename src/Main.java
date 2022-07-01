@@ -27,7 +27,14 @@ public class Main {
                     choice();
                 }
                 case 2: {
-                    System.out.println("String Array:\t" + Arrays.toString(array));
+
+                    if(array == null || Arrays.stream(array).toList().contains(null)){
+                        System.out.println("Array is empty!");
+                    }
+
+                    else{
+                        System.out.println("String Array:\t" + Arrays.toString(array));
+                    }
                     System.out.println("##########################################");
                     choice();
                 }
@@ -77,7 +84,7 @@ public class Main {
 
     // 3
     static void modify(String[] array){
-        if(array == null){
+        if(array == null || Arrays.stream(array).toList().contains(null)){
             System.out.println("Array is empty!");
             System.out.println("##########################################");
         }
@@ -86,7 +93,7 @@ public class Main {
             Scanner input = new Scanner(System.in);
             String target = input.nextLine();
             for(int s = 0; s < array.length; s++){
-                if (target.equals("Exit") || target.equals("exit") || target.equals("EXIT")) {
+                if (target.equalsIgnoreCase("Exit")) {
                     choice();
                 }
                 else if(!Arrays.stream(array).toList().contains(target)){
@@ -106,7 +113,7 @@ public class Main {
 
     // 4)
     static void search(String[] array){
-        if(array == null){
+        if(array == null || Arrays.stream(array).toList().contains(null)){
             System.out.println("Array is empty!");
             System.out.println("##########################################");
         }
@@ -115,7 +122,7 @@ public class Main {
             Scanner input = new Scanner(System.in);
             String target = input.nextLine();
             for(int s = 0; s < array.length; s++){
-                if (target.equals("Exit") || target.equals("exit") || target.equals("EXIT")) {
+                if (target.equalsIgnoreCase("Exit")) {
                     break;
                 }
                 else if(!Arrays.stream(array).toList().contains(target)){
