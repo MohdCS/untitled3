@@ -123,7 +123,7 @@ public class Main {
             String target = input.nextLine();
             for(int s = 0; s < array.length; s++){
                 if (target.equalsIgnoreCase("Exit")) {
-                    break;
+                    choice();
                 }
                 else if(!Arrays.stream(array).toList().contains(target)){
                     System.out.println(target + " could not be found!");
