@@ -55,7 +55,7 @@ public class Main {
                 }
                 case 6: {
                     System.out.println("Farewell!");
-                    break;
+                    System.exit(0);
                 }
                 default: {
                     System.out.println("Input [" + choice + "] is not a valid choice, try again!");
