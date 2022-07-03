@@ -139,7 +139,7 @@ public class Main {
     }
 
     // 5)
-    public static void size(){
+    static void size(){
         try{
             System.out.print("Size of Array:\t");
             Scanner input = new Scanner(System.in);
